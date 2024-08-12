@@ -1,9 +1,8 @@
 import boto3
 
 def scan_elbs():
-    elb_client = boto3.client('elb')
-    elbv2_client = boto3.client('elbv2')
-    regions = [region['RegionName'] for region in elb_client.describe_regions()['Regions']]
+    ec2_client = boto3.client('ec2')
+    regions = [region['RegionName'] for region in ec2_client.describe_regions()['Regions']]
 
     for region in regions:
         print(f"Scanning region: {region}")
