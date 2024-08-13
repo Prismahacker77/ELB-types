@@ -1,2 +1,2 @@
-# ELB-types
-Retrieve ELB types and config
+# SA-elb
+Detect and list ELB configurations
